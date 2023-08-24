@@ -6,5 +6,5 @@
         <input type="text" placeholder="Поиск">
         <input type="submit" value="Поиск">
     </form>
-    <a href="#">П</a>
+    <a href="#"></a>
 </header>

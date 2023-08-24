@@ -1,4 +1,6 @@
 <?php
+session_start();
+var_dump($_SESSION['user_id']);
 ?>
 <!doctype html>
 <html lang="ru">
@@ -11,6 +13,7 @@
         <link rel="stylesheet" href="./assets/styles/style.css">
     </head>
     <body>
+        <form action="./php/logout.php" method="post"><input type="submit" value="Выйти"></form>
         <?php require './moduls/header.php'?>
         <div class="container">
             <div class="item">

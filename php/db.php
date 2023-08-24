@@ -1,5 +1,5 @@
 <?php
-const DB_PROVIDER = 'psql';
+const DB_PROVIDER = 'pgsql';
 const DB_HOST = 'localhost';
 const DB_BASANAME = 'cloudshop';
 const DB_USERNAME = 'postgres';
@@ -39,4 +39,16 @@ function update($sql, $params = []){
 function delete($sql, $params = []){
     $que = query($sql, $params);
     return $que;
+}
+
+function insert($sql, $params = []){
+    $pdo = db_connect();
+    $que = $pdo->prepare($sql);
+    if (!empty($params)){
+        foreach ($params as $key => $value){
+            $que->bindValue(':'.$key, $value);
+        }
+    }
+    $que->execute();
+    return $pdo->lastInsertId();
 }

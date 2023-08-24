@@ -26,7 +26,7 @@ session_start();
         Введите пароль:<br>
         <input type="password" name="password">
     </label><br>
-    <input type="submit" value="Авторизоваться">
+    <input type="submit" value="Зарегистрироваться">
 </form>
 <a href="./login.php">Авторизация</a>
 </body>
