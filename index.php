@@ -1,6 +1,7 @@
 <?php
 session_start();
-var_dump($_SESSION['user_id']);
+require './php/db.php';
+$products = select('SELECT * FROM products');
 ?>
 <!doctype html>
 <html lang="ru">
@@ -16,13 +17,16 @@ var_dump($_SESSION['user_id']);
         <form action="./php/logout.php" method="post"><input type="submit" value="Выйти"></form>
         <?php require './moduls/header.php'?>
         <div class="container">
+            <?php foreach ($products as $product): ?>
             <div class="item">
                 <img src="" alt="">
-                <h4 class="title_item">Название товара</h4>
-                <div class="rating">4.5⭐ </div>
-                <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eaque eveniet incidunt perspiciatis quia soluta.</span>
-                <a href="#">Подробнее</a>
+                <h4 class="title_item"><?= ucfirst($product['title'])?></h4>
+                <div class="rating"><?= ucfirst($product['grade'])?>⭐ </div>
+                <span class="desc"><?= ucfirst($product['description'])?></span>
+                <span class="price"><?= ucfirst($product['price'])?>₽</span>
+                <a href="./pages/product.php?id=<?= $product['id'] ?>">Подробнее</a>
             </div>
+            <?php endforeach;?>
         </div>
     </body>
 </html>
