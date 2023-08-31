@@ -19,6 +19,7 @@ $product = select('SELECT * FROM products WHERE id = :id', ['id'=>$id]);
 <body>
     <?php require '../moduls/header.php'?>
     <?php foreach ($product as $row):?>
+        <img style="width: 250px" height="250px" src="data:image/png;base64,<?=$row['cover'] ?>" alt="">
         <h3><?= $row['title']?></h3>
         <span><?= $row['description']?></span>
         <span><?= $row['grade']?>⭐</span>

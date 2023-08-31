@@ -12,5 +12,7 @@ session_start();
 </head>
 <body>
     <?php require '../moduls/header.php'?>
+    Страница пользователя
+    <form action="../php/logout.php" method="post"<input type="submit" value="Выйти"></form>
 </body>
 </html>

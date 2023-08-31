@@ -10,6 +10,7 @@ if (!empty($login)){
         $user = select('SELECT * FROM users WHERE login = :login', ['login' => $login]);
         if (!empty($user)){
             $_SESSION['user_id'] = $user[0]['id'];
+            $_SESSION['is_admin'] = ($user[0]['is_admin'] == '1');
             header('location: ../');
         }else{
             $_SESSION['error'] = 'Пользователь не найден!';

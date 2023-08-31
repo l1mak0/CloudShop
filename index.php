@@ -19,7 +19,7 @@ $products = select('SELECT * FROM products');
         <div class="container">
             <?php foreach ($products as $product): ?>
             <div class="item">
-                <img src="" alt="">
+                <img src="data:image/png;base64,<?=$product['cover'] ?>" alt="">
                 <h4 class="title_item"><?= ucfirst($product['title'])?></h4>
                 <div class="rating"><?= ucfirst($product['grade'])?>⭐ </div>
                 <span class="desc"><?= ucfirst($product['description'])?></span>
