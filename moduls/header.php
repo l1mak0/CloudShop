@@ -1,7 +1,8 @@
 <?php
+$id = $_SESSION['user_id'];
 var_dump($_SERVER['REQUEST_URI']);
 if ($_SERVER['REQUEST_URI'] != '/') $home = '../'; else $home = './';
-if ($_SERVER['REQUEST_URI'] != '/') $profile = '../profile.php'; else $profile = './pages/profile.php';
+if ($_SERVER['REQUEST_URI'] != '/') $profile = '../profile.php?id='.$id; else $profile = './pages/profile.php?id='.$id;
 if ($_SESSION['is_admin'] == true){
     if ($_SERVER['REQUEST_URI'] != '/') $add = './add_product.php'; else $add = './pages/add_product.php';
 } else{

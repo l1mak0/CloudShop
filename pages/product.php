@@ -24,7 +24,7 @@ $product = select('SELECT * FROM products WHERE id = :id', ['id'=>$id]);
         <span><?= $row['description']?></span>
         <span><?= $row['grade']?>⭐</span>
         <span><?= $row['price']?>₽</span>
-        <form action=""><input type="submit" value="Купить"></form>
+        <form action="../php/add_card.php" method="post"><input style="display: none" type="text" value="<?=$_GET['id'] ?>" name="id"><input type="submit" value="Купить"></form>
     <?php endforeach;?>
 </body>
 </html>

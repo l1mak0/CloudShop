@@ -72,3 +72,28 @@ header{
     border: none;
     border-radius: 15px;
 }
+.card_item{
+    width: 900px;
+    display: grid;
+    grid-template-areas: 'img title price' 'img desc del';
+}
+.card_item img{
+    grid-area: img;
+}
+.card_title{
+    grid-area: title;
+}
+.card_desc{
+    grid-area: desc;
+}
+.card_price{
+    grid-area: price;
+}
+.card_item form{
+    grid-area: del;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
