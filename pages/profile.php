@@ -29,7 +29,8 @@ while ($i < count($cards)){
     <div class="container" style="width: 1200px; margin: 0 auto">
         <h1><?= $user[0]['fio'] ?></h1>
         <span>@<?= $user[0]['login'] ?></span>
-        <form action="../php/logout.php" method="post"<input type="submit" value="Выйти"></form>
+        <form action="../php/logout.php" method="post"><input type="submit" value="Выйти"></form>
+        <form action="../php/edit.php" method="post"><input type="submit" value="Изменить данные"></form>
         <div class="card">
             <?php foreach ($products as $product): ?>
                 <div class="card_item">

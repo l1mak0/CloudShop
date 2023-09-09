@@ -1,5 +1,6 @@
 <?php
 session_start();
+require '../php/db.php';
 ?>
 <!doctype html>
 <html lang="ru">
@@ -16,7 +17,7 @@ session_start();
     <form class="add" action="../php/addProduct.php" method="post" enctype="multipart/form-data">
         <label class="title">Название товара<input type="text" placeholder="Название товара" name="title" required></label>
         <label class="desc_prod">Описание товара<textarea placeholder="Описание товара" rows="10" cols="30" name="desc" required></textarea></label>
-        <label class="grade">Рейтинг<input type="number" name="grade" required></label>
+        <label class="grade">Рейтинг<input type="number" name="grade" step="0.1" required></label>
         <label class="price_prod">Цена<input type="number" name="price" required></label>
         <label class="cover">Обложка<input type="file" name="cover" required></label>
         <input type="submit" value="Добавить товар">
