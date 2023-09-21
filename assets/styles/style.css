@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
 
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -104,4 +107,25 @@ header .container{
     justify-content: space-between;
     gap: 25px;
     flex-direction: column;
+}
+.login{
+    width: 350px;
+    height: 350px;
+    margin-top: 350px;
+    display: flex;
+}
+.reg_block{
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    justify-content: space-between;
+    background-color: #57b846;
+    padding-top: 50px;
+    padding-bottom: 39px;
+    border-radius: 30px;
 }

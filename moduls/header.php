@@ -27,8 +27,8 @@ $productsForSearch = select('SELECT title FROM products');
         <?php endforeach; ?>
     </datalist>
     <a href="<?php echo $add ?>">Добавление товара</a>
-    <a href="">О нас</a>
-    <a href="">Контакты</a>
+<!--    <a href="">О нас</a>-->
+<!--    <a href="">Контакты</a>-->
     <a href="<?= $profile ?>">💼</a>
 </header>
 
