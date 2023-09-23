@@ -12,28 +12,24 @@ session_start();
     <title>Авторизация</title>
 </head>
 <body>
-    <div class="reg">
-        <span style="color: red"> <?php if (!empty($_SESSION['error'])) echo $_SESSION['error']; else echo "" ?></span>
-        <form action="../php/reg.php" method="post">
+<div class="reg">
+    <span style="color: red"> <?php if (!empty($_SESSION['error'])) echo $_SESSION['error']; else echo "" ?></span>
+    <form action="../php/reg.php" method="post">
+        <div class="sgn">
+            <span CLASS="sign">SIGN IN</span><br>
             <div class="reg_block">
-                <label>
-                    Введите ФИО:<br>
-                    <input type="text" name="fio">
-                </label><br>
-                <label>
-                    <label>
-                        Введите логин:<br>
-                        <input type="text" name="login">
-                    </label><br>
-                    <label>
-                        Введите пароль:<br>
-                        <input type="password" name="password">
-                    </label><br>
-                    <input type="submit" value="Зарегистрироваться">
-        </form>
-        <a href="./login.php">Авторизация</a>
+                    <input type="text" name="fio" placeholder="ФИО"><br>
+                    <input type="text" name="login" placeholder="Логин"><br>
+                    <input type="password" name="password" placeholder="Пароль"><br>
             </div>
-    </div>
+            <div class="btn-reg">
+                <input type="submit" value="Зарегистрироваться">
+            </div>
+
+    </form>
+    <a href="./login.php">Авторизация</a>
+</div>
+</div>
 </body>
 </html>
 

@@ -108,24 +108,76 @@ header .container{
     gap: 25px;
     flex-direction: column;
 }
-.login{
-    width: 350px;
-    height: 350px;
-    margin-top: 350px;
-    display: flex;
+.reg{
+    width: 500px;
+    background: #fff;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    display: block;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: 260px 600px;
+    height: 475px;
 }
-.reg_block{
+.sign{
+    font-family: JosefinSans-Bold;
+    font-size: 30px;
     color: #fff;
     line-height: 1.2;
     text-align: center;
     display: block;
     position: absolute;
-    width: 350px;
-    top: 50%;
-    left: 50%;
-    justify-content: space-between;
+    width: 500px;
+    top: 0;
+    left: 0;
     background-color: #57b846;
     padding-top: 50px;
     padding-bottom: 39px;
-    border-radius: 30px;
+    align-items: center;
+    margin: 150px 600px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+
+}
+.sgn input{
+    position: relative;
+    display: block;
+    border-radius: 27px;
+    margin-bottom: 2px;
+    height: 35px;
+    width: 300px;
+    font-size: 15px;
+    color: #1b3815;
+    line-height: 1.2;
+    background: #ebebeb;
+    outline: none;
+    border: none;
+    padding: 0 35px 0 35px;
+    margin-left: 100px;
+    top: 30px;
+}
+.sgn input:hover{
+    border-radius: 31px;
+    background-color: #ebebeb;
+    pointer-events: none;
+}
+.btn-reg input{
+    background: #57b846;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #fff;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+}
+.btn-reg input:hover {
+    background-color: #1b3815;
 }
